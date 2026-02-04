@@ -19,4 +19,22 @@ Like,
 x = 101...01000
 x - 1 = 101...00111 (carry will go from rightmost 1 to left side where it is needed)
 x & (x - 1) = 101...00000 (So, right most bit is eaten.)
+6. reverse(x): reverses the current binary representation of x. Starts reversing from MSB.
+For example, for (4)10 -> (0100)2
+it gives reverse(4) -> (0001)2
 
+So, it becomes:
+ans = 0
+while (x) {
+    ans = (ans << 1) + (x & 1);  
+    x >>= 1;
+}
+---
+Bitmask: Representing and manipulating small set using only numbers.
+
+---
+
+Insights:
+1. num & -num will give a number with only rightmost bit set.
+2. Be careful with >> with signed numbers it doesn't behave as expected sometimes like with -1.
+3. In C++ 14+, we can do `int num = 0b1111` and we can use it via XOR to flip a range. 
