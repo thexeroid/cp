@@ -35,6 +35,6 @@ Bitmask: Representing and manipulating small set using only numbers.
 ---
 
 Insights:
-1. num & -num will give a number with only rightmost bit set.
+1. num & -num will give a number with LSB set.
 2. Be careful with >> with signed numbers it doesn't behave as expected sometimes like with -1.
 3. In C++ 14+, we can do `int num = 0b1111` and we can use it via XOR to flip a range. 
