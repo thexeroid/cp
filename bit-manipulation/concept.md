@@ -7,7 +7,7 @@ so, -x = ~x + 1
 Some bit operations on num
 
 1. set(x, i) = x | (1 << i)
-2. unset(x, i) = x & ~(1 << i)
+2. unset(x, i) = x & ~(1 << i)          
 => if (check(x, i)) x -= (1 << i)
 3. check(x, i) = (x >> i) & 1
 4. flip(x, i) = x ^ (1 << i)
@@ -38,3 +38,7 @@ Insights:
 1. num & -num will give a number with LSB set.
 2. Be careful with >> with signed numbers it doesn't behave as expected sometimes like with -1.
 3. In C++ 14+, we can do `int num = 0b1111` and we can use it via XOR to flip a range. 
+
+Also,
+`(a & b) + (a | b) = (a + b)`
+
