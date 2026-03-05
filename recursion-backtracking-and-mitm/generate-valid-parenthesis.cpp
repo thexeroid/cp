@@ -15,7 +15,7 @@ bool check(int level, char ch) {
     return ob < n / 2;
 }
 
-void rec(int level) {
+void rec(int level) {D
     if (level == n) {
         cout << seq << endl;
         return;
