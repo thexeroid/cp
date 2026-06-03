@@ -68,7 +68,7 @@ ll merge(int start, int end) {
         bf_idx++;
     }
 
-    while (s2 <= mid) {
+    while (s2 <= end) {
         buffer[bf_idx] = A[s2];
         s2++;
         bf_idx++;
